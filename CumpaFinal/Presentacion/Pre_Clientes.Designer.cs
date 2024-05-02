@@ -64,6 +64,7 @@
             this.dgvCliente.RowTemplate.Height = 24;
             this.dgvCliente.Size = new System.Drawing.Size(1086, 237);
             this.dgvCliente.TabIndex = 0;
+            this.dgvCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellContentClick);
             // 
             // txtNombre
             // 
@@ -166,7 +167,7 @@
             this.cbxProvincia.FormattingEnabled = true;
             this.cbxProvincia.Location = new System.Drawing.Point(844, 138);
             this.cbxProvincia.Name = "cbxProvincia";
-            this.cbxProvincia.Size = new System.Drawing.Size(121, 24);
+            this.cbxProvincia.Size = new System.Drawing.Size(179, 24);
             this.cbxProvincia.TabIndex = 13;
             // 
             // cbxLocalidad
@@ -174,7 +175,7 @@
             this.cbxLocalidad.FormattingEnabled = true;
             this.cbxLocalidad.Location = new System.Drawing.Point(844, 228);
             this.cbxLocalidad.Name = "cbxLocalidad";
-            this.cbxLocalidad.Size = new System.Drawing.Size(121, 24);
+            this.cbxLocalidad.Size = new System.Drawing.Size(179, 24);
             this.cbxLocalidad.TabIndex = 14;
             // 
             // label7

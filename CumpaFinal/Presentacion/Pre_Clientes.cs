@@ -1,4 +1,5 @@
 ﻿using CumpaFinal.Datos;
+using CumpaFinal.Logica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,6 +31,14 @@ namespace CumpaFinal.Presentacion
             cbxProvincia.DataSource = provincia.MostrarProvincia().Tables[0];
             cbxProvincia.DisplayMember = "Provincia";
             cbxProvincia.ValueMember = "Provincia";
+
+            Datos_Lugar localidad = new Datos_Lugar();
+            cbxLocalidad.DataSource = localidad.MostrarLocalidad().Tables[0];
+            cbxLocalidad.DisplayMember = "Localidad";
+            cbxLocalidad.ValueMember = "Localidad";
+
+
+
         }
 
         private void label9_Click(object sender, EventArgs e)
@@ -39,6 +48,18 @@ namespace CumpaFinal.Presentacion
 
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void dgvCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Logica_Clientes logica_Clientes = new Logica_Clientes();
+
+            int indice = e.RowIndex;
+
+            txtNombre.Text = dgvCliente.Rows[indice].Cells[1].Value.ToString();
+            txtApellido.Text = dgvCliente.Rows[indice].Cells[2].Value.ToString();
+
 
         }
     }

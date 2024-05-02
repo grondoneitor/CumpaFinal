@@ -16,7 +16,12 @@ namespace CumpaFinal.Datos
             conn = new Conexion();
         }
        
-      public DataSet MostrarProvincia () 
+        public DataSet MostrarLocalidad() 
+        {
+            SqlCommand localidad = new SqlCommand("Select Localidad from Localidades");
+            return conn.EjecutarSentencia(localidad);
+        }  
+        public DataSet MostrarProvincia () 
         {
             SqlCommand mostrar = new SqlCommand("select Provincia from Provincia");
 
