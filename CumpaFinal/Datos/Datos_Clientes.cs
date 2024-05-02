@@ -25,7 +25,7 @@ namespace CumpaFinal.Datos
         {
             SqlCommand mostrar = new SqlCommand("Select * From Cliente");
          
-      return     conn.EjecutarSentencia(mostrar); 
+            return     conn.EjecutarSentencia(mostrar); 
         }
     }
 }

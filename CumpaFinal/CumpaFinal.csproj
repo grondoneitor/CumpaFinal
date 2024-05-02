@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Datos\Datos_Clientes.cs" />
     <Compile Include="Datos\Conexion.cs" />
+    <Compile Include="Datos\Datos_Lugar.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -25,6 +25,21 @@ namespace CumpaFinal.Presentacion
         private void Clientes_Load(object sender, EventArgs e)
         {
             dgvCliente.DataSource = cli.Mostrar().Tables[0];
+
+            Datos_Lugar provincia = new Datos_Lugar();
+            cbxProvincia.DataSource = provincia.MostrarProvincia().Tables[0];
+            cbxProvincia.DisplayMember = "Provincia";
+            cbxProvincia.ValueMember = "Provincia";
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
