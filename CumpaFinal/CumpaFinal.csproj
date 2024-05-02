@@ -46,16 +46,80 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Datos\Datos_Clientes.cs" />
+    <Compile Include="Datos\Conexion.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logica\Logica_Clientes.cs" />
+    <Compile Include="Logica\Datos_Personales.cs" />
+    <Compile Include="Logica\Proveedores.cs" />
+    <Compile Include="Presentacion\Categoria_Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Categoria_Productos.Designer.cs">
+      <DependentUpon>Categoria_Productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Pre_Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Pre_Clientes.Designer.cs">
+      <DependentUpon>Pre_Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Combos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Combos.Designer.cs">
+      <DependentUpon>Combos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Estado_Cuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Estado_Cuenta.Designer.cs">
+      <DependentUpon>Estado_Cuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Modo_Pago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Modo_Pago.Designer.cs">
+      <DependentUpon>Modo_Pago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Orden_Compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Orden_Compra.Designer.cs">
+      <DependentUpon>Orden_Compra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Orden_Venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Orden_Venta.Designer.cs">
+      <DependentUpon>Orden_Venta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Productos.Designer.cs">
+      <DependentUpon>Productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Proveedores.Designer.cs">
+      <DependentUpon>Proveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Ventas.cs" />
+    <Compile Include="Productos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Pre_Clientes.resx">
+      <DependentUpon>Pre_Clientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -76,8 +140,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

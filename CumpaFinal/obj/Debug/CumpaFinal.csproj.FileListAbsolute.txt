@@ -1,4 +1,3 @@
-C:\Users\sandra\Desktop\CumpaFinal\CumpaFinal\bin\Debug\CumpaFinal.exe.config
 C:\Users\sandra\Desktop\CumpaFinal\CumpaFinal\bin\Debug\CumpaFinal.exe
 C:\Users\sandra\Desktop\CumpaFinal\CumpaFinal\bin\Debug\CumpaFinal.pdb
 C:\Users\sandra\Desktop\CumpaFinal\CumpaFinal\obj\Debug\CumpaFinal.csproj.AssemblyReference.cache
@@ -8,3 +7,4 @@ C:\Users\sandra\Desktop\CumpaFinal\CumpaFinal\obj\Debug\CumpaFinal.csproj.Genera
 C:\Users\sandra\Desktop\CumpaFinal\CumpaFinal\obj\Debug\CumpaFinal.csproj.CoreCompileInputs.cache
 C:\Users\sandra\Desktop\CumpaFinal\CumpaFinal\obj\Debug\CumpaFinal.exe
 C:\Users\sandra\Desktop\CumpaFinal\CumpaFinal\obj\Debug\CumpaFinal.pdb
+C:\Users\sandra\Desktop\CumpaFinal\CumpaFinal\obj\Debug\CumpaFinal.Presentacion.Pre_Clientes.resources
