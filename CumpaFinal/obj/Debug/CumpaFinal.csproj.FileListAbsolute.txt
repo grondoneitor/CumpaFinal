@@ -8,3 +8,4 @@ C:\Users\sandra\Desktop\CumpaFinal\CumpaFinal\obj\Debug\CumpaFinal.csproj.CoreCo
 C:\Users\sandra\Desktop\CumpaFinal\CumpaFinal\obj\Debug\CumpaFinal.exe
 C:\Users\sandra\Desktop\CumpaFinal\CumpaFinal\obj\Debug\CumpaFinal.pdb
 C:\Users\sandra\Desktop\CumpaFinal\CumpaFinal\obj\Debug\CumpaFinal.Presentacion.Pre_Clientes.resources
+C:\Users\sandra\Desktop\CumpaFinal\CumpaFinal\obj\Debug\CumpaFinal.Presentacion.Orden_Venta.resources

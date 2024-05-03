@@ -15,6 +15,13 @@ namespace CumpaFinal.Presentacion
         public Orden_Venta()
         {
             InitializeComponent();
+
+            Pre_Clientes Cliente = new Pre_Clientes();
+        }
+
+        private void Orden_Venta_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
