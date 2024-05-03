@@ -33,6 +33,13 @@ namespace CumpaFinal.Datos
                 $"'{datos.Mail}','{datos.Telefono}','{datos.Contacto}','{datos.Direccion}', '{datos.ID_Provincia}','{datos.ID_Localidad}'");
             return conn.EjecutarSentencia(modificar);
         }
+
+     public DataSet Borrar(Logica_Clientes clientes)
+        {
+            SqlCommand borrar = new SqlCommand($"exec BorrarCliente {clientes.ID_Cliente}");
+            return conn.EjecutarSentencia( borrar ); 
+        }    
+    
     public DataSet Mostrar()
         {
             SqlCommand mostrar = new SqlCommand("\t  select cc.ID_Cliente ,cc.Nombre, cc.Apellido, dd.Mail, dd.Telefono, dd.Contacto, dd.Direccion, pp.Provincia, ll.Localidad\r\n\t  from Cliente cc\r\n\t  inner join Datos_Personales dd on cc.ID_Datos_Personales = dd.ID_Datos_Personales\r\n\t  inner join Localidades ll on dd.ID_Localidad = ll.ID_Localidades\r\n\t  inner join Provincia pp on ll.ID_Provincias = pp.ID_Provincia");

@@ -69,14 +69,28 @@ namespace CumpaFinal.Presentacion
             
                 cli.Modificar(TomandoDatos(), TomandoDatosPersonales());
                 Cargando();
-            }
+            Limpiar();
+
+        }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             cli.Agregar(TomandoDatos(), TomandoDatosPersonales());
             Cargando();
-        }
+            Limpiar();
 
+        }
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            cli.Borrar(TomandoDatos());
+            Cargando();
+            Limpiar();
+        }
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Cargando();
+            Limpiar();
+        }
         public Logica_Clientes TomandoDatos()
         {
             Logica_Clientes logica_Clientes = new Logica_Clientes();
@@ -103,7 +117,18 @@ namespace CumpaFinal.Presentacion
             return datos_Personales; 
         }
 
-
+        public void Limpiar()
+        {
+            txtIDCliente.Clear();
+            txtNombre.Clear();  
+            txtApellido.Clear();
+            txtMail.Clear();
+            txtTelefono.Clear();
+            txtContacto.Clear();
+            txtDireccion.Clear();
+            cbxProvincia.Text = "";
+            cbxLocalidad.Text = "";        
+        }
 
         private void label9_Click(object sender, EventArgs e)
         {
@@ -115,6 +140,6 @@ namespace CumpaFinal.Presentacion
 
         }
 
- 
+
     }
 }
