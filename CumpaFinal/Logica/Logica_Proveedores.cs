@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CumpaFinal.Logica
 {
-    public class Proveedores
+    public class Logica_Proveedores
     {
      public int ID_Proveedor { get; set; }
      public string Proveedor { get; set; }

@@ -20,8 +20,6 @@ namespace CumpaFinal.Presentacion
         {
             cli = new Datos_Clientes();
             InitializeComponent();
-            //Logica_Datos_Personales datosPersonales = new Logica_Datos_Personales();  
-            
         }
         
         
@@ -69,7 +67,7 @@ namespace CumpaFinal.Presentacion
             
                 cli.Modificar(TomandoDatos(), TomandoDatosPersonales());
                 Cargando();
-            Limpiar();
+                Limpiar();
 
         }
 
