@@ -8,6 +8,17 @@ namespace CumpaFinal.Logica
 {
     public class Logica_Datos_Personales
     { 
+        public Logica_Datos_Personales(string mail,string telefono, string contacto, string direccion, string provincia, string localidad) 
+        { 
+           this.Mail = mail;
+           this.Telefono = telefono;
+           this.Contacto = contacto;
+           this.Direccion  = direccion;
+           this.ID_Provincia = provincia;
+           this.ID_Localidad  = localidad;
+
+        }
+
         public int ID_Datos_Personales { get; set; }
         public string Mail { get; set; }
         public string Telefono { get; set; }

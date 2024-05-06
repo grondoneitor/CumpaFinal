@@ -65,6 +65,7 @@
     <Compile Include="Presentacion\Categoria_Productos.Designer.cs">
       <DependentUpon>Categoria_Productos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Persona.cs" />
     <Compile Include="Presentacion\Pre_Clientes.cs">
       <SubType>Form</SubType>
     </Compile>

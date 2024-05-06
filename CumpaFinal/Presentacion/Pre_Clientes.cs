@@ -12,15 +12,15 @@ using System.Windows.Forms;
 
 namespace CumpaFinal.Presentacion
 {
-    public partial class Pre_Clientes : Form 
+    public partial class Pre_Clientes :Form
     {
         Datos_Clientes cli;
   
-        public Pre_Clientes() : base()
+        public Pre_Clientes() 
         {
             cli = new Datos_Clientes();
             InitializeComponent();
-            Logica_Datos_Personales datosPersonales = new Logica_Datos_Personales();  
+            //Logica_Datos_Personales datosPersonales = new Logica_Datos_Personales();  
             
         }
         
@@ -104,17 +104,12 @@ namespace CumpaFinal.Presentacion
       
             return logica_Clientes; 
         }
-        public Logica_Datos_Personales TomandoDatosPersonales()
+        public Persona TomandoDatosPersonales()
         {
-            Logica_Datos_Personales datos_Personales = new Logica_Datos_Personales();
-            datos_Personales.Mail = txtMail.Text;
-            datos_Personales.Telefono = txtTelefono.Text;
-            datos_Personales.Contacto = txtContacto.Text;
-            datos_Personales.Direccion = txtDireccion.Text;
-            datos_Personales.ID_Provincia = cbxProvincia.Text;
-            datos_Personales.ID_Localidad = cbxLocalidad.Text;
+           Persona persona = new Persona
+           (txtMail.Text, txtTelefono.Text,txtContacto.Text, txtDireccion.Text, cbxProvincia.Text, cbxLocalidad.Text);
 
-            return datos_Personales; 
+           return persona; 
         }
 
         public void Limpiar()

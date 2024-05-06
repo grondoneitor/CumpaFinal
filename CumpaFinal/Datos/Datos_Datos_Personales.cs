@@ -10,10 +10,10 @@ namespace CumpaFinal.Datos
 {
     internal class Datos_Datos_Personales
     {
-        Pre_Clientes cli;
+        //Pre_Clientes cli;
         public Datos_Datos_Personales() 
         {
-          cli = new Pre_Clientes();
+          //cli = new Pre_Clientes();
         }
     
 
