@@ -10,3 +10,4 @@ C:\Users\sandra\Desktop\CumpaFinal\CumpaFinal\obj\Debug\CumpaFinal.pdb
 C:\Users\sandra\Desktop\CumpaFinal\CumpaFinal\obj\Debug\CumpaFinal.Presentacion.Pre_Clientes.resources
 C:\Users\sandra\Desktop\CumpaFinal\CumpaFinal\obj\Debug\CumpaFinal.Presentacion.Orden_Venta.resources
 C:\Users\sandra\Desktop\CumpaFinal\CumpaFinal\obj\Debug\CumpaFinal.Presentacion.Proveedores.resources
+C:\Users\sandra\Desktop\CumpaFinal\CumpaFinal\obj\Debug\CumpaFinal.Presentacion.Producto.resources

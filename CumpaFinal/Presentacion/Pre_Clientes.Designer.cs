@@ -185,6 +185,7 @@
             this.cbxProvincia.Name = "cbxProvincia";
             this.cbxProvincia.Size = new System.Drawing.Size(179, 24);
             this.cbxProvincia.TabIndex = 13;
+            this.cbxProvincia.SelectedIndexChanged += new System.EventHandler(this.cbxProvincia_SelectedIndexChanged);
             // 
             // cbxLocalidad
             // 

@@ -133,6 +133,9 @@ namespace CumpaFinal.Presentacion
 
         }
 
+        private void cbxProvincia_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

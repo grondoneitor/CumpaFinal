@@ -39,16 +39,24 @@ namespace CumpaFinal.Presentacion
         {
             proveedor.Agregar(TomandoDatosPro(), TomandDatosPersonales());
             Cargando();
+            Limpiar();
         }
         private void btnModificar_Click(object sender, EventArgs e)
         {
             proveedor.Modificar(TomandoDatosPro(), TomandDatosPersonales());
             Cargando();
+            Limpiar();
         }
         private void btnBorrar_Click(object sender, EventArgs e)
         {
             proveedor.Borrar(TomandoDatosPro());
             Cargando();
+            Limpiar();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
         }
         public Logica_Proveedores TomandoDatosPro()
         {
@@ -93,6 +101,19 @@ namespace CumpaFinal.Presentacion
 
         }
 
+        public void Limpiar()
+        {
+
+            txtIDProveedor.Text = "";
+            txtProveedor.Text = "";
+            txtMail.Text = "";
+            txtTelefono.Text = "";
+            txtContacto.Text = "";
+            txtDireccion.Text = "";
+            cbxProvincia.Text = "";
+            cbxLocalidad.Text = "";
+        }
+
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
 
@@ -102,7 +123,5 @@ namespace CumpaFinal.Presentacion
         {
 
         }
-
-
     }
 }

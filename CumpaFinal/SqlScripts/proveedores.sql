@@ -87,5 +87,26 @@ end
                
 
       end
-	   
-	  exec ActualizarProveedores 5,'Facu','facu@gmail.com','1122457620','twiter','pedro lozano 4479','Capital Federal','Agronomía'
+	   	  exec ActualizarProveedores 5,'Facu','facu@gmail.com','1122457620','twiter','pedro lozano 4479','Capital Federal','Agronomía'
+
+	     create procedure BorrarProveedor
+	      @ID_Proveedor int
+	     as begin 
+
+				declare @ID_Datos int
+				select  @ID_Datos = ID_Datos_Personales from Proveedores where ID_Proveedor = @ID_Proveedor
+
+	            delete Proveedores 
+				where ID_Proveedor = @ID_Proveedor
+
+
+
+				Delete Datos_Personales
+				where ID_Datos_Personales =@ID_Datos
+
+           
+               
+
+         end
+
+		 exec BorrarProveedor 5
