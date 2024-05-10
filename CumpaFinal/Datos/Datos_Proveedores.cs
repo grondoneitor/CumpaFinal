@@ -27,6 +27,14 @@ namespace CumpaFinal.Datos
            return conn.EjecutarSentencia( agregar );
         }
 
+        public DataSet Modificar(Logica_Proveedores proveedor, Logica_Datos_Personales datos)
+        {
+            SqlCommand modificar = new SqlCommand($"\t exec ActualizarProveedores {proveedor.ID_Proveedor},'{proveedor.Proveedor}'," +
+                $"'{datos.Mail}','{datos.Telefono}','{datos.Contacto}','{datos.Direccion}','{datos.ID_Provincia}','{datos.ID_Localidad}'");
+
+            return conn.EjecutarSentencia(modificar );  
+
+        }
 
         public DataSet Mostrar()
         {

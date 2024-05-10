@@ -78,6 +78,7 @@
             this.btnModificar.TabIndex = 43;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnAgregar
             // 
@@ -251,6 +252,7 @@
             this.dgvProveedor.RowTemplate.Height = 24;
             this.dgvProveedor.Size = new System.Drawing.Size(1077, 170);
             this.dgvProveedor.TabIndex = 23;
+            this.dgvProveedor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProveedor_CellContentClick);
             // 
             // Proveedores
             // 

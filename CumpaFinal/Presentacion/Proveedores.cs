@@ -40,7 +40,11 @@ namespace CumpaFinal.Presentacion
             proveedor.Agregar(TomandoDatosPro(), TomandDatosPersonales());
             Cargando();
         }
-
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            proveedor.Modificar(TomandoDatosPro(), TomandDatosPersonales());
+            Cargando();
+        }
         public Logica_Proveedores TomandoDatosPro()
         {
             Logica_Proveedores proveedores = new Logica_Proveedores();  
@@ -58,6 +62,10 @@ namespace CumpaFinal.Presentacion
            (txtMail.Text, txtTelefono.Text, txtContacto.Text, txtDireccion.Text, cbxProvincia.Text, cbxLocalidad.Text);
 
             return proveedor;
+
+        }
+        private void dgvProveedor_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
 
