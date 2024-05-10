@@ -36,6 +36,14 @@ namespace CumpaFinal.Datos
 
         }
 
+        public DataSet Borrar(Logica_Proveedores proveedor)
+        {
+            SqlCommand borrarr = new SqlCommand($"\t\t exec BorrarProveedor {proveedor.ID_Proveedor}\r\n");
+
+            return conn.EjecutarSentencia(borrarr);
+
+        }
+
         public DataSet Mostrar()
         {
             SqlCommand mostrar = new SqlCommand($"select pp.ID_Proveedor ,pp.Proveedor,dd.Mail,dd.Telefono,dd.Contacto,dd.Direccion,rr.Provincia,ll.Localidad\r\nfrom Proveedores pp \r\ninner join Datos_Personales dd on pp.ID_Datos_Personales = dd.ID_Datos_Personales\r\ninner join Localidades ll on dd.ID_Localidad=ll.ID_Localidades\r\ninner join Provincia rr on dd.ID_Provincia = rr.ID_Provincia");

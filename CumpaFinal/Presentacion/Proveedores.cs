@@ -45,6 +45,11 @@ namespace CumpaFinal.Presentacion
             proveedor.Modificar(TomandoDatosPro(), TomandDatosPersonales());
             Cargando();
         }
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            proveedor.Borrar(TomandoDatosPro());
+            Cargando();
+        }
         public Logica_Proveedores TomandoDatosPro()
         {
             Logica_Proveedores proveedores = new Logica_Proveedores();  
@@ -66,6 +71,19 @@ namespace CumpaFinal.Presentacion
         }
         private void dgvProveedor_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+            int indice = e.RowIndex;
+
+           txtIDProveedor.Text = dgvProveedor.Rows[indice].Cells["ID_Proveedor"].Value.ToString();
+            txtProveedor.Text = dgvProveedor.Rows[indice].Cells["Proveedor"].Value.ToString();
+            txtMail.Text = dgvProveedor.Rows[indice].Cells["Mail"].Value.ToString();
+            txtTelefono.Text = dgvProveedor.Rows[indice].Cells["Telefono"].Value.ToString();
+            txtContacto.Text = dgvProveedor.Rows[indice].Cells["Contacto"].Value.ToString();
+            txtDireccion.Text = dgvProveedor.Rows[indice].Cells["Direccion"].Value.ToString();
+            cbxProvincia.Text = dgvProveedor.Rows[indice].Cells["Provincia"].Value.ToString();
+            cbxLocalidad.Text = dgvProveedor.Rows[indice].Cells["Localidad"].Value.ToString();
+
+
 
         }
 
