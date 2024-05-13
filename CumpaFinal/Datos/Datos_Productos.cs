@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CumpaFinal.Logica;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -14,6 +15,14 @@ namespace CumpaFinal.Datos
         public Datos_Productos()
         {
           conn = new Conexion();    
+        }
+
+        public DataSet AgregarProductos(Logica_Producto producto,Logica_Categoria_Productos categoria )
+        {
+            SqlCommand agregar = new SqlCommand($"exec AgregarProducto '{categoria.Categoria}','{producto.Producto}','{producto.Color}'," +
+                $"'{producto.Tamaño}',{producto.Stock},{producto.Stock_Minimo},{producto.Precio_Costo},{producto.Precio_Venta},'{producto.Nota}'");
+
+            return conn.EjecutarSentencia(agregar );
         }
         public DataSet MostrarProductos()
         {
