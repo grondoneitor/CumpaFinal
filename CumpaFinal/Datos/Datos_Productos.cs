@@ -24,6 +24,20 @@ namespace CumpaFinal.Datos
 
             return conn.EjecutarSentencia(agregar );
         }
+        public DataSet ModificarProductos(Logica_Producto producto, Logica_Categoria_Productos categoria)
+        {
+            SqlCommand modificar = new SqlCommand($"exec ModificarProductos {producto.ID},'{categoria.Categoria}','{producto.Producto}','{producto.Color}'," +
+                $"'{producto.Tamaño}',{producto.Stock},{producto.Stock_Minimo},{producto.Precio_Costo},{producto.Precio_Venta},'{producto.Nota}'");
+
+            return conn.EjecutarSentencia(modificar);
+        }
+        public DataSet EliminarProductos(Logica_Producto producto)
+        {
+            SqlCommand eliminar = new SqlCommand($"delete Productos where ID_Productos = {producto.ID}");
+
+            return conn.EjecutarSentencia(eliminar);
+        }
+
         public DataSet MostrarProductos()
         {
             SqlCommand cmd = new SqlCommand($"select pp.ID_Productos, pp.Producto,cp.Categoria_Producto, pp.Color,pp.Tamaño,pp.Stock_Minimo,pp.Stock, " +
@@ -32,12 +46,14 @@ namespace CumpaFinal.Datos
 
          return   conn.EjecutarSentencia(cmd);        
         }
-    public DataSet mostrarCategorias()
+        public DataSet mostrarCategorias()
         {
             SqlCommand motrar = new SqlCommand("select Categoria_Producto from Categoria_Producto\r\n");
             return conn.EjecutarSentencia(motrar); 
-
         }
+
+
+
     }
 
 }

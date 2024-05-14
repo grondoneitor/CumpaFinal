@@ -20,7 +20,6 @@ values(2,'Pico loro cincelada','Plateada','Grande',4,10,8000,15000,null)
 
 
 create procedure AgregarProducto
-@ID_Producto int,
 @Categoria_Producto varchar(50),
 @Producto varchar(50),
 @Color varchar(50),
@@ -33,7 +32,13 @@ create procedure AgregarProducto
 as begin 
 
   declare @ID_Categoria_Producto int
-  select @ID_Categoria_Producto = 
-  from Categoria
+  select @ID_Categoria_Producto = ID_Categoria_Producto
+  from Categoria_Producto 
+  where Categoria_Producto = @Categoria_Producto
+
+  insert into Productos(ID_Categoria_Producto,Producto,Color,Tamaño,Stock,Stock_Minimo,Precio_Costo,Precio_Venta,Nota)	
+  values(@ID_Categoria_Producto,@Producto,@Color,@Tamaño,@Stock,@Stock_Minimo,@Precio_Costo,@Precio_Venta,@Nota)
 
 end
+
+exec AgregarProducto 'Mates','Cincelado','Bordo','Medio',15,10,16000,33000,null

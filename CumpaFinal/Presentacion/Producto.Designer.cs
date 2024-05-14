@@ -33,7 +33,7 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtIDProveedor = new System.Windows.Forms.TextBox();
+            this.txtIDProducto = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -64,6 +64,7 @@
             this.btnBorrar.TabIndex = 66;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // btnCancelar
             // 
@@ -73,6 +74,7 @@
             this.btnCancelar.TabIndex = 65;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnModificar
             // 
@@ -82,6 +84,7 @@
             this.btnModificar.TabIndex = 64;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnAgregar
             // 
@@ -104,12 +107,12 @@
             this.label9.TabIndex = 62;
             this.label9.Text = "ID:";
             // 
-            // txtIDProveedor
+            // txtIDProducto
             // 
-            this.txtIDProveedor.Location = new System.Drawing.Point(95, 68);
-            this.txtIDProveedor.Name = "txtIDProveedor";
-            this.txtIDProveedor.Size = new System.Drawing.Size(44, 22);
-            this.txtIDProveedor.TabIndex = 61;
+            this.txtIDProducto.Location = new System.Drawing.Point(95, 68);
+            this.txtIDProducto.Name = "txtIDProducto";
+            this.txtIDProducto.Size = new System.Drawing.Size(44, 22);
+            this.txtIDProducto.TabIndex = 61;
             // 
             // label6
             // 
@@ -216,6 +219,7 @@
             this.dgvProductos.RowTemplate.Height = 24;
             this.dgvProductos.Size = new System.Drawing.Size(1243, 170);
             this.dgvProductos.TabIndex = 46;
+            this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentClick);
             // 
             // label2
             // 
@@ -310,7 +314,7 @@
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtIDProveedor);
+            this.Controls.Add(this.txtIDProducto);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -338,7 +342,7 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtIDProveedor;
+        private System.Windows.Forms.TextBox txtIDProducto;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;

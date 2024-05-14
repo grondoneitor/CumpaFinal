@@ -21,15 +21,11 @@ namespace CumpaFinal.Presentacion
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void dgvProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-              prod.AgregarProductos(TomandoDatosProductos(), TomandoCategoria()) ;
-            Cargando();
-
+            int i = e.RowIndex;
+            Seleccionar(i);
         }
         private void Producto_Load(object sender, EventArgs e)
         {
@@ -38,6 +34,28 @@ namespace CumpaFinal.Presentacion
 
         }
 
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+              prod.AgregarProductos(TomandoDatosProductos(), TomandoCategoria()) ;
+            Cargando();
+            Limpiar();
+        }
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            prod.ModificarProductos(TomandoDatosProductos(), TomandoCategoria());
+            Cargando();
+            Limpiar();
+        }
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            prod.EliminarProductos(TomandoDatosProductos());
+            Cargando();
+            Limpiar();
+        }
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
 
         public void Cargando()
         {
@@ -53,13 +71,26 @@ namespace CumpaFinal.Presentacion
 
 
         }
+        public void Seleccionar(int e)
+        {
+            txtIDProducto.Text = dgvProductos.Rows[e].Cells[0].Value.ToString();
+            txtProductos.Text = dgvProductos.Rows[e].Cells[1].Value.ToString();
+            cbxCategoria.Text = dgvProductos.Rows[e].Cells[2].Value.ToString();
+            txtColor.Text = dgvProductos.Rows[e].Cells[3].Value.ToString();
+            cbxTamaño.Text = dgvProductos.Rows[e].Cells[4].Value.ToString();
+            txtStock_Min.Text = dgvProductos.Rows[e].Cells[5].Value.ToString();
+            txtStock.Text = dgvProductos.Rows[e].Cells[6].Value.ToString();
+            txtCosto.Text = dgvProductos.Rows[e].Cells[7].Value.ToString();
+            txtPrecio_Venta.Text = dgvProductos.Rows[e].Cells[8].Value.ToString();
+            txtNota.Text = dgvProductos.Rows[e].Cells[9].Value.ToString();
+        }
 
         public Logica_Producto TomandoDatosProductos()
         {
             Logica_Producto producto = new Logica_Producto();
 
             int ID = 0;
-            int.TryParse(txtIDProveedor.Text, out ID);
+            int.TryParse(txtIDProducto.Text, out ID);
 
             producto.ID = ID;
             producto.Producto = txtProductos.Text;
@@ -93,6 +124,26 @@ namespace CumpaFinal.Presentacion
             cate.Categoria = cbxCategoria.Text;
             return cate;
         }
+
+        public void Limpiar()
+        {
+            txtIDProducto.Text = "";
+            txtProductos.Text = "";
+            cbxCategoria.Text = "";
+            txtColor.Text = "";
+            cbxTamaño.Text = "";
+            txtStock_Min.Text = "";
+            txtStock.Text = "";
+            txtCosto.Text = "";
+            txtPrecio_Venta.Text = "";
+            txtNota.Text = "";
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 }
