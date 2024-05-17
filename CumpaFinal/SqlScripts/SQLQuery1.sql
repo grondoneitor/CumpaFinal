@@ -42,3 +42,36 @@ as begin
 end
 
 exec AgregarProducto 'Mates','Cincelado','Bordo','Medio',15,10,16000,33000,null
+
+
+create procedure ModificarProductos
+@ID_Producto int,
+@Categoria_Producto varchar(50),
+@Producto varchar(50),
+@Color varchar(50),
+@Tamaño varchar(50),
+@Stock int,
+@Stock_Minimo int,
+@Precio_Costo money, 
+@Precio_Venta money, 
+@Nota varchar(150)
+as begin 
+      
+  declare @ID_Categoria_Producto int
+  select @ID_Categoria_Producto = ID_Categoria_Producto
+  from Categoria_Producto 
+  where Categoria_Producto = @Categoria_Producto
+
+  update Productos
+  set ID_Categoria_Producto = @ID_Categoria_Producto, Producto= @Producto,
+      Color=@Color,Tamaño=@Tamaño,Stock=@Stock,Stock_Minimo=@Stock_Minimo,
+	  Precio_Costo=@Precio_Costo,Precio_Venta=@Precio_Venta, Nota=@Nota
+  where ID_Productos =@ID_Producto
+
+
+end
+
+exec ModificarProductos 5,'Mates','Torpedo virola lisa','Bordo','Chico',10,5,10000,20000,null
+
+
+delete Productos where ID_Productos=5

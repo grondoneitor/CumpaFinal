@@ -73,16 +73,25 @@ namespace CumpaFinal.Presentacion
         }
         public void Seleccionar(int e)
         {
-            txtIDProducto.Text = dgvProductos.Rows[e].Cells[0].Value.ToString();
-            txtProductos.Text = dgvProductos.Rows[e].Cells[1].Value.ToString();
-            cbxCategoria.Text = dgvProductos.Rows[e].Cells[2].Value.ToString();
-            txtColor.Text = dgvProductos.Rows[e].Cells[3].Value.ToString();
-            cbxTamaño.Text = dgvProductos.Rows[e].Cells[4].Value.ToString();
-            txtStock_Min.Text = dgvProductos.Rows[e].Cells[5].Value.ToString();
-            txtStock.Text = dgvProductos.Rows[e].Cells[6].Value.ToString();
-            txtCosto.Text = dgvProductos.Rows[e].Cells[7].Value.ToString();
-            txtPrecio_Venta.Text = dgvProductos.Rows[e].Cells[8].Value.ToString();
-            txtNota.Text = dgvProductos.Rows[e].Cells[9].Value.ToString();
+            Dictionary<int, Type> mapaColumnaControl = new Dictionary<int, Type>();
+
+            mapaColumnaControl.Add(0, typeof(TextBox));
+            mapaColumnaControl.Add(1, typeof(ComboBox));
+            mapaColumnaControl.Add(2, typeof(TextBox));
+            mapaColumnaControl.Add(3, typeof(TextBox));
+            mapaColumnaControl.Add(4, typeof(TextBox));
+            mapaColumnaControl.Add(5, typeof(TextBox));
+            mapaColumnaControl.Add(6, typeof(TextBox));
+            mapaColumnaControl.Add(7, typeof(TextBox));
+            mapaColumnaControl.Add(8, typeof(TextBox));
+            mapaColumnaControl.Add(9, typeof(TextBox));
+
+
+            List<TextBox> array = new List<TextBox> { txtIDProducto, txtProductos, txtColor, txtTamaño, txtStock_Min, txtStock, txtCosto, txtPrecio_Venta, txtNota };
+            List<ComboBox> combo = new List<ComboBox> { cbxCategoria };
+
+            Seleccionar select = new Seleccionar(e, dgvProductos, array, combo, mapaColumnaControl);
+            select.seleccionar();
         }
 
         public Logica_Producto TomandoDatosProductos()
@@ -131,7 +140,7 @@ namespace CumpaFinal.Presentacion
             txtProductos.Text = "";
             cbxCategoria.Text = "";
             txtColor.Text = "";
-            cbxTamaño.Text = "";
+            txtTamaño.Text = "";
             txtStock_Min.Text = "";
             txtStock.Text = "";
             txtCosto.Text = "";

@@ -52,7 +52,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtNota = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.cbxTamaño = new System.Windows.Forms.ComboBox();
+            this.txtTamaño = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -287,13 +287,12 @@
             this.label10.TabIndex = 74;
             this.label10.Text = "Tamaño:";
             // 
-            // cbxTamaño
+            // txtTamaño
             // 
-            this.cbxTamaño.FormattingEnabled = true;
-            this.cbxTamaño.Location = new System.Drawing.Point(303, 222);
-            this.cbxTamaño.Name = "cbxTamaño";
-            this.cbxTamaño.Size = new System.Drawing.Size(160, 24);
-            this.cbxTamaño.TabIndex = 73;
+            this.txtTamaño.Location = new System.Drawing.Point(303, 224);
+            this.txtTamaño.Name = "txtTamaño";
+            this.txtTamaño.Size = new System.Drawing.Size(167, 22);
+            this.txtTamaño.TabIndex = 75;
             // 
             // Producto
             // 
@@ -301,8 +300,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkBlue;
             this.ClientSize = new System.Drawing.Size(1243, 604);
+            this.Controls.Add(this.txtTamaño);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.cbxTamaño);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtNota);
             this.Controls.Add(this.label7);
@@ -361,6 +360,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtNota;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox cbxTamaño;
+        private System.Windows.Forms.TextBox txtTamaño;
     }
 }

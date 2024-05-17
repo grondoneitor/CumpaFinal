@@ -49,6 +49,7 @@
     <Compile Include="Datos\Datos_Clientes.cs" />
     <Compile Include="Datos\Conexion.cs" />
     <Compile Include="Datos\Datos_Lugar.cs" />
+    <Compile Include="Datos\Datos_Orden_Venta.cs" />
     <Compile Include="Datos\Datos_Productos.cs" />
     <Compile Include="Datos\Datos_Proveedores.cs" />
     <Compile Include="Form1.cs">
@@ -60,6 +61,7 @@
     <Compile Include="Logica\Logica_Categoria_Productos.cs" />
     <Compile Include="Logica\Logica_Clientes.cs" />
     <Compile Include="Logica\Logica_Datos_Personales.cs" />
+    <Compile Include="Logica\Logica_Orden_Venta.cs" />
     <Compile Include="Logica\Logica_Producto.cs" />
     <Compile Include="Logica\Logica_Proveedores.cs" />
     <Compile Include="Presentacion\Categoria_Productos.cs">
@@ -117,6 +119,7 @@
     <Compile Include="Presentacion\Proveedores.Designer.cs">
       <DependentUpon>Proveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Seleccionar.cs" />
     <Compile Include="Presentacion\Ventas.cs" />
     <Compile Include="Productos.cs" />
     <Compile Include="Program.cs" />
