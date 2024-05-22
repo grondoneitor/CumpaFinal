@@ -17,7 +17,7 @@ namespace CumpaFinal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Producto());
+            Application.Run(new Orden_Venta());
         }
     }
 }

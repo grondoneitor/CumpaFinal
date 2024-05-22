@@ -34,24 +34,27 @@ namespace CumpaFinal.Presentacion
 
         private void dgvProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            Dictionary<int, Type> mapaColumnaControl = new Dictionary<int, Type>();
+            int i = e.RowIndex;
+            Seleccionar(i);
+           
+        }
 
-            mapaColumnaControl.Add(0, typeof(TextBox)); 
-            mapaColumnaControl.Add(1, typeof(ComboBox)); 
-            mapaColumnaControl.Add(2, typeof(ComboBox));  
-            mapaColumnaControl.Add(3, typeof(ComboBox)); 
-            mapaColumnaControl.Add(4, typeof(ComboBox)); 
-            mapaColumnaControl.Add(5, typeof(TextBox));
-            mapaColumnaControl.Add(6, typeof(TextBox)); 
-            mapaColumnaControl.Add(7, typeof(TextBox)); 
-            mapaColumnaControl.Add(8, typeof(TextBox)); 
-            mapaColumnaControl.Add(9, typeof(TextBox)); 
+        public void Seleccionar(int i)
+        {
+            Dictionary<string, Type> tabla = new Dictionary<string, Type>();
+            tabla.Add(txtID_Orden_Venta.Name, txtID_Orden_Venta.GetType());
+            tabla.Add(cbxProducto.Name, cbxProducto.GetType());
+            tabla.Add(cbxCombo.Name, cbxCombo.GetType());
+            tabla.Add(cbxCliente.Name, cbxCliente.GetType());
+            tabla.Add(cbxModo_Pago.Name, cbxModo_Pago.GetType());
+            tabla.Add(txtCantidad.Name, txtCantidad.GetType());
+            tabla.Add(txtFecha_Venta.Name, txtFecha_Venta.GetType());
+            tabla.Add(txtTotal.Name, txtTotal.GetType());
+            tabla.Add(txtEstado_Pedido.Name, txtEstado_Pedido.GetType());
+            tabla.Add(txtNota.Name, txtNota.GetType());
 
 
-            List<TextBox> array = new List<TextBox> {txt0,txt5,txt6,txt7,txt8,txt9};
-            List<ComboBox> combo = new List<ComboBox> { cbx1 ,cbx2,cbx3,cbx4 };    
-
-            Seleccionar select = new Seleccionar(e.RowIndex, dgvOrden_Venta, array, combo, mapaColumnaControl);
+            Seleccionar select = new Seleccionar(i, dgvOrden_Venta,tabla, this);
             select.seleccionar();
         }
 

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -33,6 +34,8 @@ namespace CumpaFinal.Presentacion
             cbxLocalidad.DataSource = localidad.MostrarLocalidad().Tables[0];
             cbxLocalidad.DisplayMember = "Localidad";
             cbxLocalidad.ValueMember = "Localidad";
+
+       
 
         }
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -80,19 +83,31 @@ namespace CumpaFinal.Presentacion
         private void dgvProveedor_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            int indice = e.RowIndex;
-
-           txtIDProveedor.Text = dgvProveedor.Rows[indice].Cells["ID_Proveedor"].Value.ToString();
-            txtProveedor.Text = dgvProveedor.Rows[indice].Cells["Proveedor"].Value.ToString();
-            txtMail.Text = dgvProveedor.Rows[indice].Cells["Mail"].Value.ToString();
-            txtTelefono.Text = dgvProveedor.Rows[indice].Cells["Telefono"].Value.ToString();
-            txtContacto.Text = dgvProveedor.Rows[indice].Cells["Contacto"].Value.ToString();
-            txtDireccion.Text = dgvProveedor.Rows[indice].Cells["Direccion"].Value.ToString();
-            cbxProvincia.Text = dgvProveedor.Rows[indice].Cells["Provincia"].Value.ToString();
-            cbxLocalidad.Text = dgvProveedor.Rows[indice].Cells["Localidad"].Value.ToString();
+            int i = e.RowIndex;
+            Seleccionar(i);
 
 
 
+        }
+        public List<TextBox> textbox;
+        public List<ComboBox> combobox;
+        public void Seleccionar(int i)
+        {
+
+            Dictionary<string, Type> tabla = new Dictionary<string, Type>();
+            tabla.Add(txtIDProveedor.Name, txtIDProveedor.GetType());
+            tabla.Add(txtProveedor.Name, txtProveedor.GetType());
+            tabla.Add(txtMail.Name , txtMail.GetType());
+            tabla.Add(txtTelefono.Name  , txtTelefono.GetType());   
+            tabla.Add(txtContacto.Name , txtContacto.GetType());
+            tabla.Add(txtDireccion.Name, txtDireccion.GetType());
+            tabla.Add(cbxProvincia.Name, cbxProvincia.GetType());
+            tabla.Add(cbxLocalidad.Name, cbxLocalidad.GetType());
+
+
+            Seleccionar selec = new Seleccionar(i, dgvProveedor, tabla, this);
+            selec.seleccionar();
+        
         }
 
         public void Cargando()

@@ -29,30 +29,30 @@
         private void InitializeComponent()
         {
             this.label10 = new System.Windows.Forms.Label();
-            this.cbx4 = new System.Windows.Forms.ComboBox();
+            this.cbxModo_Pago = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txt9 = new System.Windows.Forms.TextBox();
+            this.txtNota = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbx2 = new System.Windows.Forms.ComboBox();
+            this.cbxCombo = new System.Windows.Forms.ComboBox();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.txt0 = new System.Windows.Forms.TextBox();
+            this.txtID_Orden_Venta = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt7 = new System.Windows.Forms.TextBox();
-            this.txt5 = new System.Windows.Forms.TextBox();
-            this.txt8 = new System.Windows.Forms.TextBox();
-            this.txt6 = new System.Windows.Forms.TextBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.txtEstado_Pedido = new System.Windows.Forms.TextBox();
+            this.txtFecha_Venta = new System.Windows.Forms.TextBox();
             this.dgvOrden_Venta = new System.Windows.Forms.DataGridView();
-            this.cbx1 = new System.Windows.Forms.ComboBox();
-            this.cbx3 = new System.Windows.Forms.ComboBox();
+            this.cbxProducto = new System.Windows.Forms.ComboBox();
+            this.cbxCliente = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrden_Venta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,13 +67,13 @@
             this.label10.TabIndex = 99;
             this.label10.Text = "Modo pago:";
             // 
-            // cbx4
+            // cbxModo_Pago
             // 
-            this.cbx4.FormattingEnabled = true;
-            this.cbx4.Location = new System.Drawing.Point(303, 202);
-            this.cbx4.Name = "cbx4";
-            this.cbx4.Size = new System.Drawing.Size(160, 24);
-            this.cbx4.TabIndex = 98;
+            this.cbxModo_Pago.FormattingEnabled = true;
+            this.cbxModo_Pago.Location = new System.Drawing.Point(303, 202);
+            this.cbxModo_Pago.Name = "cbxModo_Pago";
+            this.cbxModo_Pago.Size = new System.Drawing.Size(160, 24);
+            this.cbxModo_Pago.TabIndex = 98;
             // 
             // label8
             // 
@@ -86,12 +86,12 @@
             this.label8.TabIndex = 97;
             this.label8.Text = "Nota:";
             // 
-            // txt9
+            // txtNota
             // 
-            this.txt9.Location = new System.Drawing.Point(1019, 204);
-            this.txt9.Name = "txt9";
-            this.txt9.Size = new System.Drawing.Size(167, 22);
-            this.txt9.TabIndex = 96;
+            this.txtNota.Location = new System.Drawing.Point(1019, 204);
+            this.txtNota.Name = "txtNota";
+            this.txtNota.Size = new System.Drawing.Size(167, 22);
+            this.txtNota.TabIndex = 96;
             // 
             // label7
             // 
@@ -115,13 +115,13 @@
             this.label2.TabIndex = 93;
             this.label2.Text = "Combo:";
             // 
-            // cbx2
+            // cbxCombo
             // 
-            this.cbx2.FormattingEnabled = true;
-            this.cbx2.Location = new System.Drawing.Point(95, 202);
-            this.cbx2.Name = "cbx2";
-            this.cbx2.Size = new System.Drawing.Size(160, 24);
-            this.cbx2.TabIndex = 92;
+            this.cbxCombo.FormattingEnabled = true;
+            this.cbxCombo.Location = new System.Drawing.Point(95, 202);
+            this.cbxCombo.Name = "cbxCombo";
+            this.cbxCombo.Size = new System.Drawing.Size(160, 24);
+            this.cbxCombo.TabIndex = 92;
             // 
             // btnBorrar
             // 
@@ -170,12 +170,12 @@
             this.label9.TabIndex = 87;
             this.label9.Text = "ID:";
             // 
-            // txt0
+            // txtID_Orden_Venta
             // 
-            this.txt0.Location = new System.Drawing.Point(95, 48);
-            this.txt0.Name = "txt0";
-            this.txt0.Size = new System.Drawing.Size(44, 22);
-            this.txt0.TabIndex = 86;
+            this.txtID_Orden_Venta.Location = new System.Drawing.Point(95, 48);
+            this.txtID_Orden_Venta.Name = "txtID_Orden_Venta";
+            this.txtID_Orden_Venta.Size = new System.Drawing.Size(44, 22);
+            this.txtID_Orden_Venta.TabIndex = 86;
             // 
             // label6
             // 
@@ -233,33 +233,33 @@
             this.label1.Text = "Producto:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // txt7
+            // txtTotal
             // 
-            this.txt7.Location = new System.Drawing.Point(789, 125);
-            this.txt7.Name = "txt7";
-            this.txt7.Size = new System.Drawing.Size(167, 22);
-            this.txt7.TabIndex = 80;
+            this.txtTotal.Location = new System.Drawing.Point(789, 125);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(167, 22);
+            this.txtTotal.TabIndex = 80;
             // 
-            // txt5
+            // txtCantidad
             // 
-            this.txt5.Location = new System.Drawing.Point(540, 125);
-            this.txt5.Name = "txt5";
-            this.txt5.Size = new System.Drawing.Size(167, 22);
-            this.txt5.TabIndex = 79;
+            this.txtCantidad.Location = new System.Drawing.Point(540, 125);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(167, 22);
+            this.txtCantidad.TabIndex = 79;
             // 
-            // txt8
+            // txtEstado_Pedido
             // 
-            this.txt8.Location = new System.Drawing.Point(789, 202);
-            this.txt8.Name = "txt8";
-            this.txt8.Size = new System.Drawing.Size(167, 22);
-            this.txt8.TabIndex = 78;
+            this.txtEstado_Pedido.Location = new System.Drawing.Point(789, 202);
+            this.txtEstado_Pedido.Name = "txtEstado_Pedido";
+            this.txtEstado_Pedido.Size = new System.Drawing.Size(167, 22);
+            this.txtEstado_Pedido.TabIndex = 78;
             // 
-            // txt6
+            // txtFecha_Venta
             // 
-            this.txt6.Location = new System.Drawing.Point(540, 202);
-            this.txt6.Name = "txt6";
-            this.txt6.Size = new System.Drawing.Size(167, 22);
-            this.txt6.TabIndex = 77;
+            this.txtFecha_Venta.Location = new System.Drawing.Point(540, 202);
+            this.txtFecha_Venta.Name = "txtFecha_Venta";
+            this.txtFecha_Venta.Size = new System.Drawing.Size(167, 22);
+            this.txtFecha_Venta.TabIndex = 77;
             // 
             // dgvOrden_Venta
             // 
@@ -277,21 +277,21 @@
             this.dgvOrden_Venta.TabIndex = 75;
             this.dgvOrden_Venta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentClick);
             // 
-            // cbx1
+            // cbxProducto
             // 
-            this.cbx1.FormattingEnabled = true;
-            this.cbx1.Location = new System.Drawing.Point(95, 125);
-            this.cbx1.Name = "cbx1";
-            this.cbx1.Size = new System.Drawing.Size(160, 24);
-            this.cbx1.TabIndex = 100;
+            this.cbxProducto.FormattingEnabled = true;
+            this.cbxProducto.Location = new System.Drawing.Point(95, 125);
+            this.cbxProducto.Name = "cbxProducto";
+            this.cbxProducto.Size = new System.Drawing.Size(160, 24);
+            this.cbxProducto.TabIndex = 100;
             // 
-            // cbx3
+            // cbxCliente
             // 
-            this.cbx3.FormattingEnabled = true;
-            this.cbx3.Location = new System.Drawing.Point(303, 127);
-            this.cbx3.Name = "cbx3";
-            this.cbx3.Size = new System.Drawing.Size(160, 24);
-            this.cbx3.TabIndex = 101;
+            this.cbxCliente.FormattingEnabled = true;
+            this.cbxCliente.Location = new System.Drawing.Point(303, 127);
+            this.cbxCliente.Name = "cbxCliente";
+            this.cbxCliente.Size = new System.Drawing.Size(160, 24);
+            this.cbxCliente.TabIndex = 101;
             // 
             // Orden_Venta
             // 
@@ -299,30 +299,30 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkBlue;
             this.ClientSize = new System.Drawing.Size(1195, 567);
-            this.Controls.Add(this.cbx3);
-            this.Controls.Add(this.cbx1);
+            this.Controls.Add(this.cbxCliente);
+            this.Controls.Add(this.cbxProducto);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.cbx4);
+            this.Controls.Add(this.cbxModo_Pago);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.txt9);
+            this.Controls.Add(this.txtNota);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cbx2);
+            this.Controls.Add(this.cbxCombo);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txt0);
+            this.Controls.Add(this.txtID_Orden_Venta);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txt7);
-            this.Controls.Add(this.txt5);
-            this.Controls.Add(this.txt8);
-            this.Controls.Add(this.txt6);
+            this.Controls.Add(this.txtTotal);
+            this.Controls.Add(this.txtCantidad);
+            this.Controls.Add(this.txtEstado_Pedido);
+            this.Controls.Add(this.txtFecha_Venta);
             this.Controls.Add(this.dgvOrden_Venta);
             this.Name = "Orden_Venta";
             this.Text = "Orden_Venta";
@@ -336,29 +336,29 @@
         #endregion
 
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox cbx4;
+        private System.Windows.Forms.ComboBox cbxModo_Pago;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txt9;
+        private System.Windows.Forms.TextBox txtNota;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbx2;
+        private System.Windows.Forms.ComboBox cbxCombo;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txt0;
+        private System.Windows.Forms.TextBox txtID_Orden_Venta;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt7;
-        private System.Windows.Forms.TextBox txt5;
-        private System.Windows.Forms.TextBox txt8;
-        private System.Windows.Forms.TextBox txt6;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.TextBox txtEstado_Pedido;
+        private System.Windows.Forms.TextBox txtFecha_Venta;
         private System.Windows.Forms.DataGridView dgvOrden_Venta;
-        private System.Windows.Forms.ComboBox cbx1;
-        private System.Windows.Forms.ComboBox cbx3;
+        private System.Windows.Forms.ComboBox cbxProducto;
+        private System.Windows.Forms.ComboBox cbxCliente;
     }
 }

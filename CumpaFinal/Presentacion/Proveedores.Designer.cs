@@ -32,17 +32,17 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblID_Proveedor = new System.Windows.Forms.Label();
             this.txtIDProveedor = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblProvincia = new System.Windows.Forms.Label();
+            this.lblLocalidad = new System.Windows.Forms.Label();
             this.cbxLocalidad = new System.Windows.Forms.ComboBox();
             this.cbxProvincia = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.lblContacto = new System.Windows.Forms.Label();
+            this.lblTelefono = new System.Windows.Forms.Label();
+            this.lblMail = new System.Windows.Forms.Label();
+            this.lblProveedor = new System.Windows.Forms.Label();
             this.txtContacto = new System.Windows.Forms.TextBox();
             this.txtMail = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
@@ -92,16 +92,16 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // label9
+            // lblID_Proveedor
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(107, 78);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(37, 25);
-            this.label9.TabIndex = 41;
-            this.label9.Text = "ID:";
+            this.lblID_Proveedor.AutoSize = true;
+            this.lblID_Proveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID_Proveedor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblID_Proveedor.Location = new System.Drawing.Point(107, 78);
+            this.lblID_Proveedor.Name = "lblID_Proveedor";
+            this.lblID_Proveedor.Size = new System.Drawing.Size(132, 25);
+            this.lblID_Proveedor.TabIndex = 41;
+            this.lblID_Proveedor.Text = "ID_Proveedor";
             // 
             // txtIDProveedor
             // 
@@ -109,28 +109,29 @@
             this.txtIDProveedor.Name = "txtIDProveedor";
             this.txtIDProveedor.Size = new System.Drawing.Size(44, 22);
             this.txtIDProveedor.TabIndex = 40;
+            this.txtIDProveedor.Text = "txtIDProveedor";
             // 
-            // label8
+            // lblProvincia
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(837, 78);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(98, 25);
-            this.label8.TabIndex = 39;
-            this.label8.Text = "Provincia:";
+            this.lblProvincia.AutoSize = true;
+            this.lblProvincia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProvincia.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblProvincia.Location = new System.Drawing.Point(837, 78);
+            this.lblProvincia.Name = "lblProvincia";
+            this.lblProvincia.Size = new System.Drawing.Size(92, 25);
+            this.lblProvincia.TabIndex = 39;
+            this.lblProvincia.Text = "Provincia";
             // 
-            // label7
+            // lblLocalidad
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(838, 155);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(102, 25);
-            this.label7.TabIndex = 38;
-            this.label7.Text = "Localidad:";
+            this.lblLocalidad.AutoSize = true;
+            this.lblLocalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocalidad.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblLocalidad.Location = new System.Drawing.Point(838, 155);
+            this.lblLocalidad.Name = "lblLocalidad";
+            this.lblLocalidad.Size = new System.Drawing.Size(96, 25);
+            this.lblLocalidad.TabIndex = 38;
+            this.lblLocalidad.Text = "Localidad";
             // 
             // cbxLocalidad
             // 
@@ -148,61 +149,61 @@
             this.cbxProvincia.Size = new System.Drawing.Size(179, 24);
             this.cbxProvincia.TabIndex = 36;
             // 
-            // label6
+            // lblDireccion
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(589, 157);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 25);
-            this.label6.TabIndex = 35;
-            this.label6.Text = "Direccion:";
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblDireccion.Location = new System.Drawing.Point(589, 157);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(93, 25);
+            this.lblDireccion.TabIndex = 35;
+            this.lblDireccion.Text = "Direccion";
             // 
-            // label5
+            // lblContacto
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(588, 80);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 25);
-            this.label5.TabIndex = 34;
-            this.label5.Text = "Contacto:";
+            this.lblContacto.AutoSize = true;
+            this.lblContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContacto.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblContacto.Location = new System.Drawing.Point(588, 80);
+            this.lblContacto.Name = "lblContacto";
+            this.lblContacto.Size = new System.Drawing.Size(91, 25);
+            this.lblContacto.TabIndex = 34;
+            this.lblContacto.Text = "Contacto";
             // 
-            // label4
+            // lblTelefono
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(340, 155);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 25);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "Telefono:";
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefono.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblTelefono.Location = new System.Drawing.Point(340, 155);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(89, 25);
+            this.lblTelefono.TabIndex = 33;
+            this.lblTelefono.Text = "Telefono";
             // 
-            // label3
+            // lblMail
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(339, 78);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 25);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Mail:";
+            this.lblMail.AutoSize = true;
+            this.lblMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMail.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblMail.Location = new System.Drawing.Point(339, 78);
+            this.lblMail.Name = "lblMail";
+            this.lblMail.Size = new System.Drawing.Size(48, 25);
+            this.lblMail.TabIndex = 32;
+            this.lblMail.Text = "Mail";
             // 
-            // label1
+            // lblProveedor
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(105, 155);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 25);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "Proveedor:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lblProveedor.AutoSize = true;
+            this.lblProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProveedor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblProveedor.Location = new System.Drawing.Point(105, 155);
+            this.lblProveedor.Name = "lblProveedor";
+            this.lblProveedor.Size = new System.Drawing.Size(102, 25);
+            this.lblProveedor.TabIndex = 30;
+            this.lblProveedor.Text = "Proveedor";
+            this.lblProveedor.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtContacto
             // 
@@ -266,17 +267,17 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lblID_Proveedor);
             this.Controls.Add(this.txtIDProveedor);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lblProvincia);
+            this.Controls.Add(this.lblLocalidad);
             this.Controls.Add(this.cbxLocalidad);
             this.Controls.Add(this.cbxProvincia);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblDireccion);
+            this.Controls.Add(this.lblContacto);
+            this.Controls.Add(this.lblTelefono);
+            this.Controls.Add(this.lblMail);
+            this.Controls.Add(this.lblProveedor);
             this.Controls.Add(this.txtContacto);
             this.Controls.Add(this.txtMail);
             this.Controls.Add(this.txtDireccion);
@@ -298,17 +299,17 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblID_Proveedor;
         private System.Windows.Forms.TextBox txtIDProveedor;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblProvincia;
+        private System.Windows.Forms.Label lblLocalidad;
         private System.Windows.Forms.ComboBox cbxLocalidad;
         private System.Windows.Forms.ComboBox cbxProvincia;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblDireccion;
+        private System.Windows.Forms.Label lblContacto;
+        private System.Windows.Forms.Label lblTelefono;
+        private System.Windows.Forms.Label lblMail;
+        private System.Windows.Forms.Label lblProveedor;
         private System.Windows.Forms.TextBox txtContacto;
         private System.Windows.Forms.TextBox txtMail;
         private System.Windows.Forms.TextBox txtDireccion;

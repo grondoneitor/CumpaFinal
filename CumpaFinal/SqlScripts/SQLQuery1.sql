@@ -75,3 +75,29 @@ exec ModificarProductos 5,'Mates','Torpedo virola lisa','Bordo','Chico',10,5,100
 
 
 delete Productos where ID_Productos=5
+
+
+select * from Orden_Venta
+
+select * from Productos
+select * from Combos
+
+select * from Cliente
+select * from Modo_Pago
+
+select * from Productos
+
+
+
+select ov.ID_Orden_Venta, pp.Producto, cc.Combo,cl.Nombre,mp.Modo_Pago,ov.Cantidad,ov.Fecha_Venta,ov.Total, ov.Estado_Pedido,ov.Nota
+from Orden_Venta ov 
+left join Productos pp on ov.ID_Producto = pp.ID_Productos
+left join Combos cc on ov.ID_Combo = cc.ID_Combos
+left join Cliente cl on ov.ID_Cliente = cl.ID_Cliente
+left join Modo_Pago mp on ov.ID_Modo_Pago = mp.ID_Modo_Pago
+
+
+insert into Orden_Venta(ID_Producto,ID_Combo,ID_Cliente,ID_Modo_Pago,Cantidad,Fecha_Venta,Total,Estado_Pedido,Nota)
+values(1,null,9,1,1,'10/10/2024',30000,'Despachado',null)
+
+select * from Proveedores

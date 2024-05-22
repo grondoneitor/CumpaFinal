@@ -90,8 +90,8 @@ namespace CumpaFinal.Presentacion
             List<TextBox> array = new List<TextBox> { txtIDProducto, txtProductos, txtColor, txtTamaño, txtStock_Min, txtStock, txtCosto, txtPrecio_Venta, txtNota };
             List<ComboBox> combo = new List<ComboBox> { cbxCategoria };
 
-            Seleccionar select = new Seleccionar(e, dgvProductos, array, combo, mapaColumnaControl);
-            select.seleccionar();
+            //Seleccionar select = new Seleccionar(e, dgvProductos, array, combo, mapaColumnaControl);
+            //select.seleccionar();
         }
 
         public Logica_Producto TomandoDatosProductos()
